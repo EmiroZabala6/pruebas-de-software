@@ -1,0 +1,21 @@
+PROYECTO: ValidarRegistro (Maven, JUnit 5)
+
+COMO ABRIRLO EN NETBEANS
+1. Descomprime este ZIP.
+2. NetBeans: File > Open Project... y elige la carpeta "ValidarRegistro".
+   (Requiere internet la primera vez para descargar JUnit.)
+3. Clic derecho en el proyecto > Test (o Alt+F6). Deben pasar 2 tests.
+
+SI TU PROYECTO ES ANT (sin pom.xml)
+- Usa los archivos de la carpeta "solo_archivos_java":
+  ValidarRegistro.java -> Source Packages
+  ValidarRegistroTest.java -> Test Packages
+- Agrega la libreria JUnit en Properties > Libraries > Test Libraries.
+- Esos archivos usan JUnit 5. Si tu NetBeans solo tiene JUnit 4, cambia los imports a:
+    import static org.junit.Assert.assertEquals;
+    import org.junit.Test;
+
+COBERTURA DE RAMAS
+Test 1 (25, true, "Segura123"): D1=V, D2=V, D3=V -> APROBADO
+Test 2 (15, false, "123"):      D1=F, D2=F, D3=F -> RECHAZADO
+Cada decision tiene sus dos ramas cubiertas: 6 de 6 ramas (100%).
